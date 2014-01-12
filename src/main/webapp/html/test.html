@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Hello</title>
+		<script src="../library/angular.js"></script>
+		<script src="../library/jquery-1.9.1.min.js"></script>
+		<script src="../angularscripts/FirstModule.js"></script>
+	</head>
+	<body ng-app="FirstModule">
+		<div ng-controller="FirstController">
+			{{message}}
+		</div>
+		<ul ng-controller="SecondController">
+			<input type="text" data-ng-model="num" />  equals {{double(num)}}
+		</ul>
+		<ul ng-controller="ThirdController">
+			<input type="text" id="value1" ng-model="value1" />
+			<input type="text" id="value2" ng-model="value2" />
+			<input type="button" ng-click="result=addNumbers(value1,value2)" value="submit" name="submit" /> result :: {{result}}
+		</ul>
+	</body>
+</html>

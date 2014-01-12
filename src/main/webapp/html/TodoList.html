@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+	<html>
+	<head><title>TODO App</title>
+		<script src="../library/angular.js"></script>
+		<script src="../library/jquery-1.9.1.min.js"></script>
+		<script src="../angularscripts/TodoModule.js"></script>
+		<link rel="stylesheet" href="../css/TodoStyle.css">
+	</head>
+
+		<body data-ng-app="TodoModule">
+			<ul data-ng-controller="TodoController">
+				<li>
+					<span>{{remaining()}} of {{todoList.length}} remaining</span>
+				</li>
+				<li>
+					<a href="" data-ng-click="archive()">Archive </a>
+				</li>
+				<li data-ng-repeat="todo in todoList">
+						<input type="checkbox" data-ng-model="todo.done" />
+						<span class="done-{{todo.done}}">{{todo.text}}</span>
+				</li>
+				<form data-ng-submit="addTodo()">
+			        <input type="text" data-ng-model="todoText"  size="30" placeholder="add new todo here">
+			        <input class="btn-style" type="submit" value="add">
+      			</form>
+			</ul>
+		</body>
+	</html>
