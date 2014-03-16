@@ -1,0 +1,50 @@
+.define{
+	width:100px;
+	height:100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	
+	
+	
+}
+
+#shape3{
+	-webkit-transform:rotatex(75deg);
+	position: absolute;
+	background: red;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	-webkit-animation:redbullet infinite;
+	-webkit-animation-duration:4s;
+}
+#shape4{
+	-webkit-transform:rotateY(70deg);
+	position: absolute;
+	left:46.5%;
+	top:22px;
+	background:blue;
+	
+}
+
+#shape6{
+	-webkit-transform:rotatex(75deg);
+	position: absolute;
+	background: green;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-animation:greenbullet infinite;
+	-webkit-animation-duration:4s;
+}
+
+@-webkit-keyframes redbullet /* Safari and Chrome */
+{
+from {left:0px;}
+to {left:43%;}
+}
+
+@-webkit-keyframes greenbullet /* Safari and Chrome */
+{
+from {right:0px;}
+to {right:43%;}
+}
+
