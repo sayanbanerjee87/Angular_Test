@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<div id="triangle_up" class="pacman_up"></div>
+	<div id="triangle_down" class="pacman_down"></div>
+	<div id="burst-12" class="pacman"></div>
+	<div id="circle"></div>
+</body>
+<script src="../library/jquery-1.9.1.js"></script>
+
+<script>
+	$(document).ready(function(){
+		setInterval(function(){
+			/*$("#triangle_up").removeClass('pacman_up').addClass('pacman_up_close');*/
+			/*$("#triangle_down").removeClass('pacman_down').addClass('pacman_down_close');*/
+			$("#triangle_up").toggleClass("pacman_up pacman_up_close");
+			$("#triangle_down").toggleClass("pacman_down pacman_down_close");
+		},200);
+		/*setInterval(function(){
+			$("#triangle_up").removeClass('pacman_up_close').addClass('pacman_up');
+			$("#triangle_down").removeClass('pacman_down_close').addClass('pacman_down');
+		},400);*/
+	});
+</script>
+</html>

@@ -1,0 +1,85 @@
+#triangle_up {
+	position: absolute;
+	left: 53px;
+	width: 0;
+	height: 0;
+	border-top: 46px solid transparent;
+	border-left: 48px solid red;
+	border-bottom: 50px solid transparent;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 49px;
+}
+
+#triangle_down {
+	width: 0;
+	position: absolute;
+	top: 51px;
+	left: 55px;
+	border-top: 38px solid transparent;
+	border-left: 50px solid red;
+	border-bottom: 52px solid transparent;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 49px;
+	border-top-right-radius: 0px;
+}
+
+
+#burst-12 {
+	position: absolute;
+	top:70px;
+	left:200px;
+    display: none;
+	background: red;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    text-align: center;
+	background: transparent;
+}
+#burst-12:before, #burst-12:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 80px;
+    background: red;
+}
+#burst-12:before {
+    -webkit-transform: rotate(30deg);
+}
+#burst-12:after {
+    -webkit-transform: rotate(60deg);
+}
+.pacman_up{
+	-webkit-transform: rotate(54deg);
+}
+.pacman_down{
+	-webkit-transform: rotate(302deg);
+}
+.pacman_up_close{
+	-webkit-transform:rotate(89deg);
+}
+.pacman_down_close{
+	-webkit-transform: rotate(280deg);
+	width: 17px !important;
+	left: 40px !important;
+}
+
+
+#circle {
+	position: absolute;
+	right:5%;
+	width: 30px;
+	height: 30px;
+	background: red;
+	-webkit-border-radius: 50px;
+	-webkit-animation: mymove 4s infinite;
+	top: 59px;
+}
+
+@-webkit-keyframes mymove
+{
+from {right: 5%;}
+to {right: 92%;}
+}

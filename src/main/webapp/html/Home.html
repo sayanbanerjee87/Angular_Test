@@ -1,8 +1,23 @@
 <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="../css/SearchModule.css"></link>
+	<script src="../library/angular.js"></script>
+	<script src="../angularscripts/SearchModule.js"></script>
+</head>
+<body data-ng-app="SearchModule">
+	<div data-ng-controller="SearchController">
+		<ul>
+			<input type="text" data-ng-model="Search.Name">{{Search.Name}}</input>
+				<li>
+					<span data-ng-repeat="player in playersName | filter:Search">
+						<a>{{player.Name}}</a>
+						<a>{{player.Profession}}</a><br>
+					</span>
+				</li>
+		</ul>
 
-	<html>
-		<head><title>Home</title>
-			<script src="../library/angular.js"></script>
-			<script src="../library/jquery-1.9.1.min.js"></script>
-			<script src="../angularscripts/FirstModule.js"></script>
-		</head>
+	</div>
+</body>
+</html>

@@ -13,7 +13,7 @@ var designBalls=function(cnvObj){
 			  click: function(layer) {
 				$(this).animateLayer(layer, {
 			      
-						rotate: '+=21780'
+						rotate: '+=360'
 			      	
 			    });
 			    setTimeout(function(){
