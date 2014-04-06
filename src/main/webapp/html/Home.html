@@ -9,13 +9,20 @@
 <body data-ng-app="SearchModule">
 	<div data-ng-controller="SearchController">
 		<ul>
-			<input type="text" data-ng-model="Search.Name">{{Search.Name}}</input>
-				<li>
-					<span data-ng-repeat="player in playersName | filter:Search">
-						<a>{{player.Name}}</a>
-						<a>{{player.Profession}}</a><br>
-					</span>
-				</li>
+				<div class="search-box">
+					<input type="text" data-ng-model="Search.Name" ></input>
+					<img src="../image/search-icon.png" class="search-image"></img>
+				</div>
+				<div class="grid-table">
+					<li data-ng-repeat="player in playersName | filter:Search" class="grid-style">
+						<div class="tdata">
+							<a>{{player.Name}}</a>
+						</div>
+						<div class="tdata">
+							<a>{{player.Profession}}</a>
+						</div>
+					</li>
+				</div>
 		</ul>
 
 	</div>
