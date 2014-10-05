@@ -1,0 +1,27 @@
+#sampleDiv{
+	border:1px solid red;
+	width: 110px;
+	
+	max-height: 320px;
+	overflow: hidden;
+	padding-bottom: 14px;
+}
+
+li,ul{
+	list-style-type:none;
+}
+
+.samplePic{
+	background: url('../images/icons.png') no-repeat -69px -20px;
+	width: 8px;
+	height: 8px;
+	position: absolute;
+	top: 334px;
+	left: 61px;
+	border: none;
+}
+
+.sample{
+	padding-bottom: 5px;
+	padding-top:3px;
+}

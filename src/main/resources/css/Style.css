@@ -1,0 +1,70 @@
+#box[mode="flat3d"] {
+top:	120px;
+left:	50px;
+width:	150px;
+height:	150px;
+-webkit-transform:	translateY(50%) skewY(30deg) scaleY(1.1);
+-moz-transform:	translateY(50%) skewY(30deg) scaleY(1.1);
+-o-transform:	translateY(50%) skewY(30deg) scaleY(1.1);
+}
+#box[mode="flat3d"]::before {
+content: "";
+top:	0px;
+left:	150px;
+width:	150px;
+height:	150px;
+background-color:	rgba(0,255,0,.4);
+-webkit-transform:	skewY(-50deg) translateX(0%) translateY(-60%);
+-moz-transform:	skewY(-50deg) translateX(0%) translateY(-60%);
+-o-transform:	skewY(-50deg) translateX(0%) translateY(-60%);
+}
+#box[mode="flat3d"]::after {
+content: "";
+top:	0px;
+left:	150px;
+width:	150px;
+height:	150px;
+background-color:	rgba(0,0,255,.4);
+-webkit-transform:	translateY(-109%) skewX(-40deg) translateX(-50%) scaleY(1.19);
+-moz-transform:	translateY(-109%) skewX(-40deg) translateX(-50%) scaleY(1.19);
+-o-transform:	translateY(-109%) skewX(-40deg) translateX(-50%) scaleY(1.19);
+}
+Real 3D need some code on the parent element of the one in 3D. Here, it’s simply <body>
+body {
+-webkit-perspective:	1000px;
+-moz-perspective: 75;
+-o-perspective: 1000px;
+-webkit-perspective-origin:	200px -150px;
+-moz-perspective-origin: 200px -150px;
+-o-perspective-origin: 200px -150px;
+}
+#box[mode="real3d"] {
+top:	120px;
+left:	70px;
+width:	200px;
+height:	200px;
+-webkit-transform-style: preserve-3d;
+-webkit-transform:	translateX(-20%) rotateY(-45deg);
+-moz-transform:	translateX(-20%) rotateY(-45deg);
+-o-transform:	translateX(-20%) rotateY(-45deg);
+}
+#box[mode="real3d"]::before {
+content: "";
+top:	-100px;
+width:	200px;
+height:	200px;
+background-color:	rgba(0,0,255,.4);
+-webkit-transform:	rotateY(90deg) rotateX(90deg) translate(50%, -50%);
+-moz-transform:	rotateY(90deg) rotateX(90deg) translate(50%, -50%);
+-o-transform:	rotateY(90deg) rotateX(90deg) translate(50%, -50%);
+}
+#box[mode="real3d"]::after {
+content: "";
+top:	0px;
+width:	200px;
+height:	200px;
+background-color:	rgba(0,255,0,.4);
+-webkit-transform:	rotateY(90deg) translateX(50%);
+-moz-transform:	rotateY(90deg) translateX(50%);
+-o-transform:	rotateY(90deg) translateX(50%);
+}
